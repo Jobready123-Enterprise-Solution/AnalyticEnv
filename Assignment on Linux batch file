@@ -1,0 +1,62 @@
+Assumption: without specification, each task below only allow one line of command to complete the mission
+Part 1
+1)	Invoke a command prompt
+2)	Create an user group named testG
+3)	Create an user named DQ
+4)	Add DQ in user group testG
+5)	Change working directory to home directory of DQ
+6)	Create a directory named scripttest 
+7)	Switch to the directory of scripttest
+8)	Find out the execution path of command bash
+9)	Create a file named user.csv with following commands
+cat  >  user.csv << _end_
+Dayong,38
+Jason,29
+Knight,45
+_end_
+
+
+
+Part 2
+Create a batch file named dataconditioning.sh for following tasks
+1)	Convert user.csv file to user.sql
+
+Execute the batch file with user.csv as the first parameter and users as the second parameter
+
+
+
+
+
+
+
+
+#!/bin/bash
+# Make sure that file name is provided through command line
+if [[ "$1" == "" ]]
+then 
+	echo "No files"
+	exit 1
+else
+
+	# Make sure that file is available and readable
+	FILE="$1"
+	if [[ ! -f $FILE ]] 
+	then
+		echo $FILE is not exist
+		exit 1
+	elif [[ ! -r $FILE ]]
+	then
+		echo $FILE is not readable
+		exit 2
+	fi
+fi
+FS=","
+for line in $(cat < $FILE)
+do
+
+array=(`echo $line | tr "," "\n"`)
+echo "INSERT INTO" $2 "VALUES (" ${array[0]} "," ${array[1]} ");"
+
+done
+
+
