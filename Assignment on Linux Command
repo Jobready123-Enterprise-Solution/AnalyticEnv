@@ -1,0 +1,35 @@
+
+Assumption: without specification, each task below only allow one line of command to complete the mission
+1)	Invoke a command prompt
+2)	Change working directory to root directory
+3)	List the files/folders under root directory with details
+4)	Change working directory to root directory
+5)	Create a directory named test under user home directory
+6)	Without changing directory, create a directory named subtest1 under directory test 
+7)	Change working directory to subtest1
+8)	Without changing directory, create a directory named subtest2 under directory test 
+9)	Show value of system path variable (printenv)
+10)	Create user group tester
+11)	Create user tester1 with password testerpass
+12)	Add tester1 to tester group
+13)	Write current user name with echo in front to file named user.txt
+14)	Display information from user.txt
+15)	Change working directory to subtest2
+16)	Check current working directory
+17)	Move user.txt file to local directory
+18)	Create a file named testtemp.sh with #!/bin/bash top line
+19)	Create a file named test.sh with contents from testtemp.sh on top and contents from user.txt second
+20)	Check the file privilege 
+21)	Change the file mode to executable
+22)	Execute the file
+23)	Go back to directory 1 level up 
+24)	Execute test.sh (there are 2 commands here) 
+25)	Copy user.txt previously created to local directory with filename changed to your own name
+26)	Show current TCP/IP information of local machine 
+27)	Display the network settings currently assigned
+28)	Check if local machine can access google.com
+29)	Delete directory subtest1
+30)	Go to directory 1 level up
+31)	Delete directory of test
+32)	Find out the process id of current terminal
+33)	Kill the process
